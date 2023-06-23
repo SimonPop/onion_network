@@ -1,4 +1,7 @@
-# Onion Network
+<h1  align="center">🧅 Onion Network </h1>
+
+<img src="imgs/illustration.png" alt="banner" width="100%">
+
 
 Onion-structured networks are special kinds of scale-free networks with a special topologies. They can be decomposed into layers of similar degree nodes.
 
@@ -21,8 +24,10 @@ from onion_network import onion_graph, plot_onion
 
 G = onion_graph(n=100, gamma=2.5, alpha=3., max_trial=1000)
 
-plot_onion(G)
+plot_onion(G, cmap="tab20b")
 ```
+
+<img src="imgs/example.png" alt="banner" width="50%" style="display:block;margin-left: auto;margin-right: auto;">
 
 ## References
 
