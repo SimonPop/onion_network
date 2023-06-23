@@ -9,7 +9,7 @@ install_requires = [t.strip() for t in tests_require]
 
 setup(
     name="onion_network",
-    version="1.0",
+    version="1.0.1",
     description="A module for generating and visualizing onion-structured networks!",
     long_description=long_description,
     author="Simon Popelier",
