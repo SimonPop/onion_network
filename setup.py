@@ -5,6 +5,7 @@ import os
 with open("README.md", "r") as f:
     long_description = f.read()
 
+
 def read(*paths, **kwargs):
     """Read the contents of a text file safely.
     >>> read("project_name", "VERSION")
@@ -21,12 +22,14 @@ def read(*paths, **kwargs):
         content = open_file.read().strip()
     return content
 
+
 def read_requirements(path):
     return [
         line.strip()
         for line in read(path).split("\n")
         if not line.startswith(('"', "#", "-", "git+"))
     ]
+
 
 setup(
     name="onion_network",
