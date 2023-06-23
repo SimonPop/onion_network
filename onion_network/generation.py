@@ -35,9 +35,10 @@ def onion_graph(
             raise ValueError(
                 "This seed does not allow for a valid degree sequence. Please try another seed or run again without seed."
             )
-        degree_sequence = [
-            int(d) for d in powerlaw_sequence(n, exponent=gamma, seed=seed)
-        ]
+        degree_sequence = [d for d in powerlaw_sequence(n, exponent=gamma, seed=seed)]
+        degree_sequence = [min(d, max_degree) for d in degree_sequence]
+        degree_sequence = [max(d, min_degree) for d in degree_sequence]
+        degree_sequence = [int(d) for d in degree_sequence]
         max_trial = max_trial - 1
 
     if seed is None and max_trial > 0:
@@ -48,7 +49,6 @@ def onion_graph(
             )
         except:
             # Try with another degree sequence.
-            print("Trying with another sequence")
             G = onion_graph(n, seed, gamma, alpha, max_trial=max_trial // 2)
     else:
         # Re-trying is useless since the seed is defining the degree sequence.
@@ -72,7 +72,7 @@ def onion_graph_from_degree_sequence(
             "This degree sequence is not graphical. It would be impossible to generate an onion structure with it."
         )
 
-    degree_sequence = sorted(degree_sequence, reverse=True)
+    degree_sequence = sorted(degree_sequence, reverse=False)
 
     # Store trial number.
     initial_max_trial = max_trial
