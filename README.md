@@ -2,10 +2,16 @@
 
 <img src="imgs/illustration.png" alt="banner" width="100%">
 
+<p align="center">
+<a href="https://github.com/SimonPop/onion_network/"><img alt="Project Version" src="https://img.shields.io/badge/version-1.0.0-blue"></a>
+<a href="https://www.python.org"><img alt="Python Version 3.8" src="https://img.shields.io/badge/Python-3.8-blue.svg?style=flat&logo=python&logoColor=white"></a>
+<a href="https://github.com/SimonPop/onion_network/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
+<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+</p>
 
 Onion-structured networks are special kinds of scale-free networks with a special topologies. They can be decomposed into layers of similar degree nodes.
 
-This property gives them a strong resilience to attacks.
+This property gives them a strong resilience to node failure/removal attacks.
 
 This library can help you explore these networks, giving access to both a generation and visualization method. 
 
@@ -15,7 +21,7 @@ This library can help you explore these networks, giving access to both a genera
 
 TODO
 
-> Note: (Wu & Holme, 2011) describe a generation algorithm in their paper. This algorithm is implemented in this  repository. This algorithm can fail under certain circumstances. Therefore a `max_trial` number has been added so that the process can be tried different times.
+> Note: [(Wu & Holme, 2011)](https://arxiv.org/abs/1108.1841) describe a generation algorithm in their paper. This algorithm is implemented in this  repository. This algorithm can fail under certain circumstances. Therefore a `max_trial` number has been added so that the process can be tried different times.
 
 ### Example
 
