@@ -16,4 +16,5 @@ setup(
     author_email="simon.popelier@gmail.com",
     packages=["onion_network"],
     install_requires=install_requires,
+    url='https://github.com/SimonPop/onion_network'
 )

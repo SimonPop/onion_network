@@ -7,21 +7,36 @@
 <a href="https://www.python.org"><img alt="Python Version 3.8" src="https://img.shields.io/badge/Python-3.8-blue.svg?style=flat&logo=python&logoColor=white"></a>
 <a href="https://github.com/SimonPop/onion_network/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+<a href="https://badge.fury.io/py/onion-network"><img src="https://badge.fury.io/py/onion-network.svg" alt="PyPI version" height="18"></a>
 </p>
 
-Onion-structured networks are special kinds of scale-free networks with a special topologies. They can be decomposed into layers of similar degree nodes.
+Onion-structured networks are special kinds of scale-free networks with special topologies. 
 
-This property gives them a strong resilience to node failure/removal attacks.
+They tend to possess a high degree [assortativity](https://en.wikipedia.org/wiki/Assortativity). It makes it possible to decompose them into layers of same-degree nodes, hence the name.
+
+This property gives them strong resilience to [node deletion](https://en.wikipedia.org/wiki/Node_deletion) attacks.
 
 This library can help you explore these networks, giving access to both a generation and visualization method. 
+
+## Algorithm
+
+A generative algorithm producing synthetic scale-free networks with onion structure is implemented as described in the paper: [Onion structure and network robustness](https://arxiv.org/abs/1108.1841).
+
+> Note: This algorithm can fail under certain circumstances. Therefore a `max_trial` number has been added so that the process can be tried different times until a viable solution is found.
+
+### Visualization
+
+A side module allows plotting the generated graphs, radially separating onion layers.
 
 ## Usage
 
 ### Installation
 
-TODO
+You can install the package using `pip`.
 
-> Note: [(Wu & Holme, 2011)](https://arxiv.org/abs/1108.1841) describe a generation algorithm in their paper. This algorithm is implemented in this  repository. This algorithm can fail under certain circumstances. Therefore a `max_trial` number has been added so that the process can be tried different times.
+```shell
+pip install onion-network
+```
 
 ### Example
 
@@ -34,6 +49,7 @@ plot_onion(G, cmap="tab20b")
 ```
 
 <img src="imgs/example.png" alt="banner" width="50%" style="display:block;margin-left: auto;margin-right: auto;">
+
 
 ## References
 
