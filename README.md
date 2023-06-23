@@ -41,10 +41,9 @@ pip install onion-network
 ### Example
 
 ```python
-from onion_network import onion_graph, plot_onion
-
-G = onion_graph(n=100, gamma=2.5, alpha=3., max_trial=1000)
-
+# Example usage of the onion generation and plotting.
+from onion_network import plot_onion, onion_graph
+G = onion_graph(n=100, gamma=2.5, alpha=3, max_trial=100)
 plot_onion(G, cmap="tab20b")
 ```
 
