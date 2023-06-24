@@ -12,6 +12,7 @@ setup(
     version="1.0.1",
     description="A module for generating and visualizing onion-structured networks!",
     long_description=long_description,
+    long_description_content_type='text/markdown',
     author="Simon Popelier",
     author_email="simon.popelier@gmail.com",
     packages=["onion_network"],
